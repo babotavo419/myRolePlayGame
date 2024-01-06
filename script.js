@@ -129,9 +129,14 @@ function buyHealth() {
 
 function buyWeapon() {
     if (gold >= 30) {
-        // Code to run if the player has at least 30 gold will go here
-    }
-}
+      gold -= 30;
+      currentWeapon++;
+    goldText.innerText = gold; // 
+          text.innerText = "You now have a new weapon."; 
+      } else {
+          text.innerText = "You don't have enough gold to buy a new weapon.";
+      }
+};
 
 function fightSlime() {
     // Function body will go here
